@@ -1,0 +1,31 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<div id="text">
+
+<p>
+  <i>Name:</i>
+  <%= @idea.name %>
+</p>
+
+<p>
+  <i>Description:</i>
+  <%= @idea.description %>
+</p>
+
+<p>
+  <b>Picture:</b>
+  <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
+</p>
+
+</div>
+
+<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Back', ideas_path %>
+
+<div class="btn-group">
+  <button class="btn">Left</button>
+  <button class="btn">Middle</button>
+  <button class="btn">Right</button>
+</div>
